@@ -1,0 +1,31 @@
+#include <iostream>
+
+using namespace std;
+int main()
+{
+    int arr[50],size,insert,i,pos;
+    cout<<"Enter total number of Array:\n";
+    cin>>size;
+    cout<<"Enter the elements:\n";
+    for(i=0;i<size;i++)
+    {
+        cin>>arr[i];
+    }
+
+    cout<<"Enter the elements to be Insert:";
+    cin>>insert;
+    cout<<"Enter the index number:";
+    cin>>pos;
+    for(i=size;i>pos;i--)
+    {
+        arr[i]=arr[i-1];
+    }
+    arr[pos]=insert;
+    cout<<"New array is:\n";
+    for(i=0;i<size+1;i++)
+    {
+        cout<<arr[i]<<" ";
+    }
+
+    return 0;
+}
